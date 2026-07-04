@@ -14,4 +14,4 @@
 - `results/` — 所有实验的 CSV/summary 输出
 
 ## 快速复现
-见 `results/surface_d9_preparation_report.md`
+见 `surface_d9_preparation_report.md`
