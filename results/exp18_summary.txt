@@ -1,0 +1,21 @@
+EXPERIMENT 18: INTERPRETABILITY STUDY SUMMARY
+========================================================================
+Code: 25_1_5_Rotated_Surface_Logical_0
+N test states: 50
+Rollouts per label: 20
+MCTS_ACTS: 10
+
+Per-state metrics (mean ± std):
+  Top-1 Flatten vs true:    0.540 ± 0.498
+  Top-1 RowCol  vs true:    0.340  ± 0.474
+  Top-3 Flatten vs true:    0.840 ± 0.367
+  Top-3 RowCol  vs true:    0.540  ± 0.498
+
+Model-vs-model agreement:
+  Top-1 same:               0.320 ± 0.466
+  Top-3 same:               0.120 ± 0.325
+  Spearman inter-model:     0.296 ± 0.407
+  Kendall  inter-model:     0.241 ± 0.311
+  Pairwise inter-model:     0.621 ± 0.155
+
+Conflict states (inter-model Spearman < 0.9): 49/50 (98.0%)

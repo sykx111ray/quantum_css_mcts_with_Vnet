@@ -1,0 +1,6 @@
+run_id,cnot,depth,time,is_valid,syndrome_error,x_syndrome_error,z_syndrome_error,is_logical_zero
+0,49,61,2.2483097999938764,True,0.0,0.0,0.0,True
+1,50,62,2.284549900010461,True,0.0,0.0,0.0,True
+2,45,57,2.267527899995912,True,0.0,0.0,0.0,True
+3,52,64,2.400471100001596,True,0.0,0.0,0.0,True
+4,47,59,2.2600929000182077,True,0.0,0.0,0.0,True

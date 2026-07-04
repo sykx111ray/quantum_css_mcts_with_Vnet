@@ -1,0 +1,52 @@
+Supervision Target Ablation — Final Report
+======================================================================
+Code: 7_1_3_Steane_Code, Topology: all_to_all
+Training: 2000 train, 500 val, 500 test
+Architecture: MLP [64, 32], 3,521 params
+MCTS: 500 iterations, 5 runs per target
+Standard labels: 50 rollouts
+Teacher labels: 200 rollouts
+
+IMPORTANT: Ranking is based on FINAL CIRCUIT QUALITY,
+NOT label quality or regression accuracy.
+
+----------------------------------------------------------------------
+TRAINING METRICS
+----------------------------------------------------------------------
+Label                                 R2       MAE      RMSE   Pearson      Time
+--------------------------------------------------------------------------------
+Random Mean                       0.9982    0.1115    0.1685    0.9991      3.9s
+Random Minimum                    0.9998    0.0026    0.0453    0.9999      4.2s
+Random Top-3 Mean                 0.9994    0.0176    0.0812    0.9997      4.7s
+Random Top-5 Mean                 0.9989    0.0425    0.1113    0.9995      4.2s
+Best-Trajectory Teacher           1.0000    0.0006    0.0071    1.0000      4.2s
+
+----------------------------------------------------------------------
+MCTS SEARCH RESULTS (ranked by CNOT count)
+----------------------------------------------------------------------
+Rank  Label                               CNOT     Depth     Runtime     Nodes   Success
+----------------------------------------------------------------------------------------------------
+   1  Random Mean                      8.8±0.8  11.8±0.8       0.048       501      100%
+   2  Random Minimum                   9.2±0.8  12.2±0.8       0.056       501      100%
+   3  Best-Trajectory Teacher          9.2±0.8  12.2±0.8       0.041       501      100%
+   4  Random Top-3 Mean                9.6±1.7  12.6±1.7       0.041       501      100%
+   5  Random Top-5 Mean                9.6±0.9  12.6±0.9       0.042       501      100%
+
+----------------------------------------------------------------------
+KEY FINDINGS
+----------------------------------------------------------------------
+Best supervision target:  Random Mean
+  - CNOT: 8.8 ± 0.8
+  - Depth: 11.8 ± 0.8
+  - CNOT improvement vs Random Mean: +0.0%
+
+Worst supervision target: Random Top-5 Mean
+  - CNOT: 9.6 ± 0.9
+
+Correlation analysis:
+  Training R2 vs MCTS CNOT correlation: check ablation_summary.csv
+
+Files generated:
+  D:\Vnet\results\ablation_mcts_raw.csv
+  D:\Vnet\results\ablation_summary.csv
+  D:\Vnet\results\ablation_report.txt

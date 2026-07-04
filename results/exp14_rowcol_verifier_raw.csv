@@ -1,0 +1,6 @@
+cnot,depth,time,cost,ok,is_valid,syndrome_error,x_syndrome_error,z_syndrome_error,is_logical_zero,v_num_cnot,v_num_h
+215,255,3.8287611000123434,255,True,True,0.0,0.0,0.0,True,0,0
+241,281,3.7850366000202484,281,True,True,0.0,0.0,0.0,True,0,0
+220,260,3.7888923000136856,260,True,True,0.0,0.0,0.0,True,0,0
+230,270,3.785513600014383,270,True,True,0.0,0.0,0.0,True,0,0
+196,236,3.7740825999935623,236,True,True,0.0,0.0,0.0,True,0,0

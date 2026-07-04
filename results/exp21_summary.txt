@@ -1,0 +1,38 @@
+============================================================
+Experiment 21: Target Semantics Verification
+============================================================
+
+Code: 25_1_5_Rotated_Surface_Logical_0
+States: 50
+Rollouts per action: 20
+Repeat sets for stability: 3
+
+------------------------------------------------------------
+Q1: Is the state value stable?
+------------------------------------------------------------
+  Metric: CV of min(Q) across repeat sets
+  Mean CV: 0.0116  Median CV: 0.0108
+  Threshold: CV < 0.10
+  Verdict: YES
+  (mean CV = 0.0116, < 0.10)
+
+------------------------------------------------------------
+Q2: Is the action variance larger than rollout noise?
+------------------------------------------------------------
+  Metric: between-action variance / within-action variance
+  Mean variance ratio: 0.08
+  Median variance ratio: 0.07
+  F-test significant: 37/50 states (74.0%)
+  Threshold: variance ratio > 2.0
+  Verdict: NO
+  (mean ratio = 0.08, <= 2.0)
+
+------------------------------------------------------------
+Q3: Which Q aggregation does V_pred most closely match?
+------------------------------------------------------------
+  V_pred vs mean(Q)          r=+0.9801  Spearman=+0.9836
+  V_pred vs min(Q)           r=+0.9852  Spearman=+0.9833
+  V_pred vs median(Q)        r=+0.9802  Spearman=+0.9838
+  V_pred vs top-3 mean(Q)    r=+0.9847  Spearman=+0.9841
+
+  Best match (highest |Pearson r|): min(Q) (|r|=0.9852)

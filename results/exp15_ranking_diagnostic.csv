@@ -1,0 +1,16 @@
+model,metric,mean,std
+A_FlattenMLP,spearman,0.269365,0.286071
+A_FlattenMLP,kendall,0.221179,0.218158
+A_FlattenMLP,pairwise,0.636171,0.129898
+A_FlattenMLP,top1,0.166667,0.372678
+A_FlattenMLP,top3,0.333333,0.471405
+B_FlattenRank,spearman,0.446246,0.376769
+B_FlattenRank,kendall,0.381530,0.332829
+B_FlattenRank,pairwise,0.744020,0.217714
+B_FlattenRank,top1,0.433333,0.495536
+B_FlattenRank,top3,0.700000,0.458258
+C_RowColTrans,spearman,0.308131,0.383549
+C_RowColTrans,kendall,0.259999,0.315027
+C_RowColTrans,pairwise,0.674789,0.200681
+C_RowColTrans,top1,0.300000,0.458258
+C_RowColTrans,top3,0.533333,0.498888

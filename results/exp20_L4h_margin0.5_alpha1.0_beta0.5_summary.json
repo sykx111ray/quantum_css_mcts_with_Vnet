@@ -1,0 +1,43 @@
+{
+  "loss": "L4h",
+  "hparams": {
+    "margin": 0.5,
+    "alpha": 1.0,
+    "beta": 0.5
+  },
+  "train_metrics": {
+    "MAE": 1.7941504249572753,
+    "MSE": 6.2281636885329865,
+    "RMSE": 2.495628916432286,
+    "R2": 0.9428481717664525,
+    "Pearson_r": 0.9729706647609241
+  },
+  "mcts_cnot_mean": 43.4,
+  "mcts_cnot_std": 4.31740662898458,
+  "mcts_cnot_min": 36,
+  "mcts_cnot_max": 54,
+  "mcts_runs": 20,
+  "mcts_iterations": 2000,
+  "ckpt": "D:\\Vnet\\checkpoints\\exp20_L4h_margin0.5_alpha1.0_beta0.5.pt",
+  "timestamp": 1783125984.7286575,
+  "verifier_valid_rate": 1.0,
+  "verifier_valid_cnot_mean": 43.4,
+  "verifier_valid_depth_mean": 55.4,
+  "verifier_invalid_count": 0,
+  "verifier_z_syndrome_mean": 0.0,
+  "verifier_x_syndrome_mean": 0.0,
+  "verifier_logical": 1.0,
+  "verifier_summary": {
+    "raw_runs": 20,
+    "valid_runs": 20,
+    "invalid_runs": 0,
+    "valid_rate": 1.0,
+    "raw_cnot_mean": 43.4,
+    "raw_depth_mean": 55.4,
+    "valid_cnot_mean": 43.4,
+    "valid_depth_mean": 55.4,
+    "x_syndrome": 0.0,
+    "z_syndrome": 0.0,
+    "logical": 1.0
+  }
+}

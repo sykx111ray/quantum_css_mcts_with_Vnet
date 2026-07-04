@@ -1,0 +1,18 @@
+Baseline Value Network ¡ª Steane Code
+==================================================
+Architecture: MLP 21¡ú[64, 32]¡ú1
+Parameters: 3521
+Train/Val/Test: 2000/500/500
+Rollouts per target: 50
+Best epoch: 106
+Training time: 4.8s
+Normalizer: mean=8.7314 std=4.0004
+
+Test Metrics:
+  MAE: 0.111459
+  MSE: 0.028394
+  RMSE: 0.168505
+  R2: 0.998186
+  Pearson_r: 0.999097
+
+Dataset generation time: 3.4s

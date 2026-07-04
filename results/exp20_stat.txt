@@ -1,0 +1,59 @@
+======================================================================
+Exp20 MCTS results (20 runs, 2000 iters, seeds 1000-1019)
+======================================================================
+Arm                         TrainN    CNOT mean¡Àstd              95%CI       Depth     min-max
+----------------------------------------------------------------------
+L0 (MSE baseline)             3000  118.85¡À11.31  [113.90,123.80]   142.8¡À11.3  [104,138]
+L2 (Margin Ranking)            500  162.55¡À18.24  [154.56,170.54]   186.6¡À18.2  [129,202]
+L4h (Hybrid MSE+Margin)        500  138.00¡À11.74  [132.86,143.14]   162.0¡À11.7  [106,159]
+
+======================================================================
+Train metrics (auxiliary only ¡ª NOT primary judge)
+======================================================================
+Arm                            R^2     MAE       r
+L0 (MSE baseline)            0.955   4.863   0.978
+L2 (Margin Ranking)          0.265  20.532   0.552
+L4h (Hybrid MSE+Margin)      0.926   6.325   0.962
+
+======================================================================
+Paired t-tests (CNOT, paired by MCTS seed)
+======================================================================
+
+  L2 (Margin Ranking) vs L0 (MSE baseline):
+    mean(CNOT_b - CNOT_a) = +43.70  95%CI=[+33.29, +54.11]
+    t = -8.788  p = 0.0000  n = 20  Cohen d_z = +1.965
+    >>> L2 (Margin Ranking) is significantly WORSE than L0 (MSE baseline) (CI excludes 0)
+
+  L4h (Hybrid MSE+Margin) vs L0 (MSE baseline):
+    mean(CNOT_b - CNOT_a) = +19.15  95%CI=[+11.97, +26.33]
+    t = -5.582  p = 0.0000  n = 20  Cohen d_z = +1.248
+    >>> L4h (Hybrid MSE+Margin) is significantly WORSE than L0 (MSE baseline) (CI excludes 0)
+
+======================================================================
+Multiple comparison correction (Bonferroni, n=2 comparisons)
+======================================================================
+  L2 (Margin Ranking): p_raw=0.0000  p_bonf=0.0000  ¡ú SIGNIFICANT
+  L4h (Hybrid MSE+Margin): p_raw=0.0000  p_bonf=0.0000  ¡ú SIGNIFICANT
+
+======================================================================
+Decision rule (per exp20_loss_design.md ¡ì4.2)
+======================================================================
+  Primary: L2 < L0 ?
+    L2 mean CNOT = 162.55,  L0 = 118.85,  diff = +43.70 CNOT
+    95% CI for (L2 - L0) = [+33.29, +54.11]
+    >>> PRIMARY: L2 (Margin) ¡Ü L0 (MSE) ¡ª Exp20 DOES NOT SUPPORT the 'loss is the bottleneck' hypothesis on MCTS CNOT
+
+  Secondary: L4h ¡Ö L2 ?
+    L4h mean CNOT = 138.00,  L2 = 162.55
+    95% CI for (L4h - L2) = [-33.43, -15.67]
+    >>> SECONDARY: L4h differs from L2 by more than 0.5 CNOT ¡ª calibration term matters
+
+======================================================================
+! CONTROL VARIABLE WARNING (CRITICAL)
+======================================================================
+  L0 trained on 3000 states; L2/L4h trained on 500 states.
+  Two variables changed simultaneously: Loss AND Dataset Size.
+  -> If L2/L4h had improved, could not attribute to Loss alone.
+  -> Here L2/L4h are WORSE than L0, so the conclusion 'Loss is not the
+     primary bottleneck' is robust to this confound: a fair L2/L4h with
+     3000 states could only do better, not worse.

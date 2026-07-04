@@ -1,0 +1,72 @@
+EXPERIMENT 19: PREDICTION COMPRESSION — STATISTICAL VALIDATION
+========================================================================
+Code: 25_1_5_Rotated_Surface_Logical_0
+N test states: 150
+MCTS_ACTS: 10
+Models: Flatten+Rank (Exp12), RowCol+Rank (Exp17)
+
+AGGREGATE STATISTICS
+------------------------------------------------------------------------
+flatten_dr:
+  n=150  mean=2.513193  median=2.539964  std=0.836030
+  95% CI: [2.378308, 2.648079]
+  min=0.213544  max=4.560820
+
+rowcol_dr:
+  n=150  mean=1.662950  median=1.350376  std=1.268385
+  95% CI: [1.458308, 1.867592]
+  min=0.149933  max=5.711974
+
+flatten_std:
+  n=150  mean=0.764544  median=0.781962  std=0.239269
+  95% CI: [0.725940, 0.803148]
+  min=0.058666  max=1.280615
+
+rowcol_std:
+  n=150  mean=0.499875  median=0.409551  std=0.369423
+  95% CI: [0.440272, 0.559478]
+  min=0.041263  max=1.476718
+
+flatten_var:
+  n=150  mean=0.641395  median=0.611498  std=0.364045
+  95% CI: [0.582660, 0.700131]
+  min=0.003442  max=1.639976
+
+rowcol_var:
+  n=150  mean=0.385438  median=0.167734  std=0.476122
+  95% CI: [0.308620, 0.462256]
+  min=0.001703  max=2.180696
+
+dr_ratio:
+  n=150  mean=0.735801  median=0.697847  std=0.671728
+  95% CI: [0.627424, 0.844178]
+  min=0.052520  max=6.247988
+
+Mean dynamic range ratio (RowCol / Flatten): 0.6617
+
+PAIRED TESTS — DYNAMIC RANGE
+------------------------------------------------------------------------
+  wilcoxon_stat: 2339.0
+  wilcoxon_p: 4.498143034672142e-10
+  ttest_stat: 7.489848141605052
+  ttest_p: 5.624328337022832e-12
+  cohens_dz: 0.6115435399288408
+  n_pairs: 150
+  n_nonzero: 150
+
+PAIRED TESTS — PREDICTION STD
+------------------------------------------------------------------------
+  wilcoxon_stat: 2016.0
+  wilcoxon_p: 7.82548798527823e-12
+  ttest_stat: 8.181686964463996
+  ttest_p: 1.1410859986735063e-13
+  cohens_dz: 0.6680319432705798
+  n_pairs: 150
+  n_nonzero: 150
+
+INTERPRETATION GUIDE
+------------------------------------------------------------------------
+Wilcoxon p < 0.05  : significant difference in paired ranks
+Cohen's |d_z| > 0.5: medium effect; > 0.8 large effect
+Mean ratio (RowCol/Flatten) < 1.0: RowCol has narrower range
+Mean ratio (RowCol/Flatten) << 1.0: strong compression

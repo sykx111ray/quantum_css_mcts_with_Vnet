@@ -1,0 +1,17 @@
+Code: 7_1_3_Steane_Code
+Input dim: 21 (flattened (3, 7) matrix)
+Train size: 2000
+Val size: 500
+Test size: 500
+Rollouts per target: 50
+
+Target statistics (train set):
+  mean: 8.7314
+  std:  4.0004
+  min:  3.00
+  max:  13.86
+Target statistics (test set):
+  mean: 8.9503
+  std:  3.9566
+  min:  3.00
+  max:  13.88

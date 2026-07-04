@@ -1,0 +1,13 @@
+Deduplicated V-Net Results
+==================================================
+Total unique states: 194
+Split: 126 train / 19 val / 49 test
+Train-test overlap: 0 (guaranteed)
+Model: MLP(21 -> [32,16] -> 1)
+Best epoch: 277
+  MAE: 0.302612
+  RMSE: 0.439977
+  R2: 0.976320
+  Pearson_r: 0.991404
+
+Exp1 reference: 50-rollout MAE = 0.114

@@ -1,0 +1,2 @@
+model,cnot_mean,cnot_std,depth_mean,depth_std,valid_rate,valid_cnot_mean,valid_depth_mean,invalid_count,logical,z_syndrome_mean,x_syndrome_mean,R2,MAE,Pearson_r
+RowCol,220.4,16.890825912311097,260.4,16.890825912311097,1.0,220.4,260.4,0,1.0,0.0,0.0,0.9751737602705791,5.81929898071289,0.9876356232866215

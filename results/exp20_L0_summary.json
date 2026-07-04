@@ -1,0 +1,24 @@
+{
+  "loss": "L0",
+  "hparams": {},
+  "train_metrics": {
+    "MAE": 0.7230040397644043,
+    "MSE": 1.1247266817932322,
+    "RMSE": 1.060531320514973,
+    "R2": 0.9896791109960895,
+    "Pearson_r": 0.9948649898312953
+  },
+  "mcts_cnot_mean": 41.65,
+  "mcts_cnot_std": 3.021175268004159,
+  "mcts_cnot_min": 37,
+  "mcts_cnot_max": 47,
+  "mcts_runs": 20,
+  "mcts_iterations": 2000,
+  "ckpt": "D:\\Vnet\\checkpoints\\exp20_L0.pt",
+  "timestamp": 1783120069.0406847,
+  "verifier_valid_rate": 1.0,
+  "verifier_valid_cnot_mean": 41.65,
+  "verifier_invalid_count": 0,
+  "verifier_z_syndrome_mean": 0.0,
+  "verifier_x_syndrome_mean": 0.0
+}

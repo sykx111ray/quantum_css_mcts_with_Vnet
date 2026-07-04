@@ -1,0 +1,41 @@
+{
+  "loss": "L2",
+  "hparams": {
+    "margin": 0.5
+  },
+  "train_metrics": {
+    "MAE": 6.7420963859558105,
+    "MSE": 67.89814925218306,
+    "RMSE": 8.240033328341765,
+    "R2": 0.3769426178407693,
+    "Pearson_r": 0.7711741292599357
+  },
+  "mcts_cnot_mean": 43.6,
+  "mcts_cnot_std": 3.8131351929875232,
+  "mcts_cnot_min": 39,
+  "mcts_cnot_max": 52,
+  "mcts_runs": 20,
+  "mcts_iterations": 2000,
+  "ckpt": "D:\\Vnet\\checkpoints\\exp20_L2_margin0.5.pt",
+  "timestamp": 1783125869.0413225,
+  "verifier_valid_rate": 1.0,
+  "verifier_valid_cnot_mean": 43.6,
+  "verifier_valid_depth_mean": 55.6,
+  "verifier_invalid_count": 0,
+  "verifier_z_syndrome_mean": 0.0,
+  "verifier_x_syndrome_mean": 0.0,
+  "verifier_logical": 1.0,
+  "verifier_summary": {
+    "raw_runs": 20,
+    "valid_runs": 20,
+    "invalid_runs": 0,
+    "valid_rate": 1.0,
+    "raw_cnot_mean": 43.6,
+    "raw_depth_mean": 55.6,
+    "valid_cnot_mean": 43.6,
+    "valid_depth_mean": 55.6,
+    "x_syndrome": 0.0,
+    "z_syndrome": 0.0,
+    "logical": 1.0
+  }
+}

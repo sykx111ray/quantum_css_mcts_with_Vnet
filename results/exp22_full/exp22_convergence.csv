@@ -1,0 +1,9 @@
+seed,arm,iteration,best_cnot,best_depth,is_valid,logical_ok,x_syndrome,z_syndrome,runtime_s,first_valid_iteration,first_best_iteration
+1000,Baseline,100,41,53,True,True,0.0,0.0,1.5830975999997463,100,100
+1000,Baseline,200,36,48,True,True,0.0,0.0,3.1793799999868497,100,200
+1001,Baseline,100,42,54,True,True,0.0,0.0,1.5708154999883845,100,100
+1001,Baseline,200,37,49,True,True,0.0,0.0,3.1847859999979846,100,200
+1000,ValueNet,100,45,57,True,True,0.0,0.0,1.8614867000142112,100,100
+1000,ValueNet,200,40,52,True,True,0.0,0.0,3.7750437000067905,100,200
+1001,ValueNet,100,36,48,True,True,0.0,0.0,1.8647480999934487,100,100
+1001,ValueNet,200,36,48,True,True,0.0,0.0,3.763150599988876,100,100
